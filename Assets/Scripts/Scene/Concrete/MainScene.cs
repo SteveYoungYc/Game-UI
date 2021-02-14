@@ -29,7 +29,7 @@ public class MainScene : SceneState
 
     private void SceneLoaded(Scene scene, LoadSceneMode loadSceneMode)
     {
-        //panelManager.Push(new MainPanel());
+        panelManager.Push(new MainPanel());
         Debug.Log($"{sceneName}场景加载完毕");
     }
 }

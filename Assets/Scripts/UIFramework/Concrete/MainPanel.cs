@@ -11,6 +11,9 @@ public class MainPanel : BasePanel
 
     public override void OnEnter()
     {
-
+        UITool.GetOrAddComponentInChildren<Button>("ExitBtn").onClick.AddListener(() =>
+        {
+            GameRoot.Instance.SceneSystem.SetScene(new StartScene());
+        });
     }
 }
