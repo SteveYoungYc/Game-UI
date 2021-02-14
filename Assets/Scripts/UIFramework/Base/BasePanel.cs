@@ -46,4 +46,8 @@ public abstract class BasePanel
     {
         UIManager.DestroyUI(UIType);
     }
+
+    public void Push(BasePanel panel) => PanelManager.Push(panel);
+
+    public void Pop() => PanelManager.Pop();
 }

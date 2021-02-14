@@ -14,6 +14,7 @@ public class MainPanel : BasePanel
         UITool.GetOrAddComponentInChildren<Button>("ExitBtn").onClick.AddListener(() =>
         {
             GameRoot.Instance.SceneSystem.SetScene(new StartScene());
+            Pop();
         });
     }
 }

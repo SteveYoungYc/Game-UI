@@ -13,7 +13,7 @@ public class StartPanel : BasePanel
     {
         UITool.GetOrAddComponentInChildren<Button>("SettingBtn").onClick.AddListener(() =>
         {
-            PanelManager.Push(new SettingPanel());
+            Push(new SettingPanel());
         });
         
         UITool.GetOrAddComponentInChildren<Button>("StartBtn").onClick.AddListener(() =>

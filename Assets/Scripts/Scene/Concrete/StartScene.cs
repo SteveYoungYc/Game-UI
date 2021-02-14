@@ -19,17 +19,20 @@ public class StartScene : SceneState
         else
         {
             panelManager.Push(new StartPanel());
+            GameRoot.Instance.SetAction(panelManager.Push);
         }
     }
 
     public override void OnExit()
     {
         SceneManager.sceneLoaded -= SceneLoaded;
+        panelManager.PopAll();
     }
 
     private void SceneLoaded(Scene scene, LoadSceneMode loadSceneMode)
     {
         panelManager.Push(new StartPanel());
+        GameRoot.Instance.SetAction(panelManager.Push);
         Debug.Log($"{sceneName}场景加载完毕");
     }
 }

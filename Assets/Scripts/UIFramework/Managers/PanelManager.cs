@@ -40,13 +40,20 @@ public class PanelManager
     {
         if (panelStack.Count > 0)
         {
-            panelStack.Peek().OnExit();
-            panelStack.Pop();
+            panelStack.Pop().OnExit();
         }
 
         if (panelStack.Count > 0)
         {
             panelStack.Peek().OnResume();
+        }
+    }
+
+    public void PopAll()
+    {
+        while (panelStack.Count > 0)
+        {
+            panelStack.Pop().OnExit();
         }
     }
 }

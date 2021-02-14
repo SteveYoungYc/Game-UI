@@ -13,7 +13,7 @@ public class SettingPanel : BasePanel
     {
         UITool.GetOrAddComponentInChildren<Button>("ExitBtn").onClick.AddListener(() =>
         {
-            PanelManager.Pop();
+            Pop();
         });
     }
 }
